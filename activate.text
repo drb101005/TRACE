@@ -1,0 +1,18 @@
+
+Terminal
+
+Commands
+
+URL
+
+Frontend
+
+cd frontend then npm run dev
+
+localhost:5173
+
+Backend
+
+cd backend, activate venv, then fastapi dev main.py
+
+localhost:8000
