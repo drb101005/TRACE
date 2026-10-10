@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "trace-backend"
+version = "0.1.0"
+description = "AI-Run Statutory Revenue Audit Backend"
+authors = ["TRACE Team"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.109.0"
+uvicorn = {extras = ["standard"], version = "^0.27.0"}
+pydantic = "^2.5.0"
+pydantic-settings = "^2.1.0"
+sqlalchemy = "^2.0.25"
+alembic = "^1.13.0"
+pandas = "^2.1.4"
+openpyxl = "^3.1.2"
+pymupdf = "^1.23.8"
+pytesseract = "^0.3.10"
+pillow = "^10.2.0"
+python-multipart = "^0.0.6"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+httpx = "^0.26.0"
+langchain = "^0.1.0"
+langchain-google-genai = "^0.0.6"
+google-generativeai = "^0.3.2"
+mcp = "^0.9.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-asyncio = "^0.23.2"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+asyncio_mode = "auto"
